@@ -12,7 +12,7 @@
 			});
 			chrome.storage.sync.set({'flag': 'on'}, function() {
 				console.log("image-rendering is pixelated");
-				applyPixelate.innerHTML = 'Unpixelate';
+				applyPixelate.innerHTML = 'Disable';
 			});
 		}
 		else{
@@ -23,7 +23,7 @@
 			});
 			chrome.storage.sync.set({'flag': 'off'}, function() {
 				console.log("image-rendering is auto");
-				applyPixelate.innerHTML = 'Pixelate';
+				applyPixelate.innerHTML = 'Enable';
 			});
 		}
 	});

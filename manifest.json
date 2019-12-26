@@ -1,7 +1,7 @@
 {
 	"name": "Pixelate",
-	"version": "1.0",
-	"description": "Easily switch between pixelated and standard image rendering",
+	"version": "1.0.1",
+	"description": "Toggle pixel-perfect image rendering on webpages and files",
 	"permissions": ["activeTab", "declarativeContent", "storage"],
 	"background": {
 		"scripts": ["background.js"],
