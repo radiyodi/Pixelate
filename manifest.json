@@ -1,10 +1,19 @@
 {
 	"name": "Pixelate",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Toggle pixel-perfect image rendering on webpages and files",
 	"permissions": ["activeTab", "declarativeContent", "storage"],
+	"commands": {
+		"toggle": {
+			"suggested_key": {
+				"default": "Ctrl+Shift+X"
+			},
+		  "description": "Toggle pixel-perfect",
+		  "global": true
+		}
+	},
 	"background": {
-		"scripts": ["background.js"],
+		"scripts": ["background.js","toggle.js"],
 		"persistent": false
 	},
 	"page_action": {
