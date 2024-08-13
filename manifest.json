@@ -2,7 +2,7 @@
 	"name": "Pixelate",
 	"version": "1.0.2",
 	"description": "Toggle pixel-perfect image rendering on webpages and files",
-	"permissions": ["activeTab", "declarativeContent", "storage", "scripting"],
+	"permissions": ["activeTab", "storage", "scripting"],
 	"commands": {
 		"toggle": {
 			"suggested_key": {
