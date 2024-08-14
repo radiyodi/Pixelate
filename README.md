@@ -7,6 +7,6 @@ Chrome extension to toggle pixel-perfect image rendering. Available on the [Chro
 ## Features
 - injects ```image-rendering: pixelated``` to ```img``` CSS property
 - allows for easier viewing of original pixels in low-res images such as pixel art sprites when zooming in
-- can be toggled on and off by clicking the extension icon and choosing Enable/Disable
+- can be toggled on and off by clicking the extension icon or by assigning a keyboard shortcut in Chrome's extension settings
 
 Disabled in Chrome settings menus and does not affect images on the Chrome Web Store due to restrictions.
