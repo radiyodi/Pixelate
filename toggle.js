@@ -1,10 +1,12 @@
-export default toggle;
+export {toggle, clear};
 
-function toggle(element){
+var tabKeyPrefix = 'pixelate-enabled-tab' + '-'
+
+function toggle(){
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
         var activeTabId = tabs[0].id;
-        var activeTabKey = 'pixelate-enabled-tab' + '-' + activeTabId;
-        console.log("getting data for key " + activeTabKey);
+        var activeTabKey = tabKeyPrefix + activeTabId;
+        console.log("getting state for key " + activeTabKey);
         chrome.storage.session.get([activeTabKey], function(data) {
             chrome.scripting.insertCSS({
                 target: { tabId: activeTabId },
@@ -14,5 +16,14 @@ function toggle(element){
                 console.log("image-rendering is " + (data[activeTabKey] ? "auto" : "pixelated"));
             });
         });
+    });
+}
+
+function clear(){
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+        var activeTabId = tabs[0].id;
+        var activeTabKey = tabKeyPrefix + activeTabId;
+        console.log("clearing state for key " + activeTabKey);
+        chrome.storage.session.remove([activeTabKey]);
     });
 }
